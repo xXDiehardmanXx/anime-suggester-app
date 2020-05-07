@@ -1,0 +1,17 @@
+{
+  "name": "animesuggesterv2",
+  "displayName": "animesuggesterv2",
+  "expo": {
+    "name": "animesuggesterv2",
+    "slug": "animesuggesterv2",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
