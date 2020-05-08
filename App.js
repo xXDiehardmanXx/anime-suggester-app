@@ -6,6 +6,7 @@ import Suggest from './screens/Suggest'
 import { Icon } from 'react-native-elements'
 import { createAppContainer } from 'react-navigation'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
+import { createStackNavigator } from 'react-navigation-stack'
 
 // function App() {
 //   return (
@@ -15,9 +16,23 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 //   );
 // }
 
+const SearchNav = createStackNavigator({
+  Search: {
+    screen: Search
+  }
+}, {
+  initialRouteName: 'Search'
+})
+
+const HomeNav = createStackNavigator({
+  "My Anime World": {
+    screen: Home
+  }
+})
+
 const TabNavigator = createMaterialBottomTabNavigator({
   Home: {
-    screen: Home,
+    screen: HomeNav,
     navigationOptions: {
       tabBarLabel: 'Home',
       tabBarIcon: ({ tintColor }) => (
@@ -29,7 +44,7 @@ const TabNavigator = createMaterialBottomTabNavigator({
     }
   },
   Search: {
-    screen: Search,
+    screen: SearchNav,
     navigationOptions: {
       tabBarLabel: 'Search',
       tabBarIcon: ({ tintColor }) => (
