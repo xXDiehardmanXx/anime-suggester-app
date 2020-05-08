@@ -1,0 +1,71 @@
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import Home from './screens/Home'
+import Search from './screens/Search'
+import Suggest from './screens/Suggest'
+import { Icon } from 'react-native-elements'
+import { createAppContainer } from 'react-navigation'
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
+
+// function App() {
+//   return (
+//     <View style={styles.container}>
+//       <Home />
+//     </View>
+//   );
+// }
+
+const TabNavigator = createMaterialBottomTabNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+      tabBarIcon: ({ tintColor }) => (
+          <Icon name='home' type='font-awesome' color={tintColor} size={25} />
+      ),
+      activeColor: '#ffffff',
+      inactiveColor: '#bda1f7',
+      barStyle: { backgroundColor: '#6948f4' }
+    }
+  },
+  Search: {
+    screen: Search,
+    navigationOptions: {
+      tabBarLabel: 'Search',
+      tabBarIcon: ({ tintColor }) => (
+          <Icon name='search' type='font-awesome' color={tintColor} size={22} />
+      ),
+      activeColor: '#ffffff',
+      inactiveColor: '#ebaabd',
+      barStyle: { backgroundColor: '#d13568' }
+    }
+  },
+  Suggest: {
+    screen: Suggest,
+    navigationOptions: {
+      tabBarLabel: 'Suggest',
+      tabBarIcon: ({ tintColor }) => (
+          <Icon name='film' type='font-awesome' color={tintColor} size={22} />
+      ),
+      activeColor: '#ffffff',
+      inactiveColor: '#ebaabd',
+      barStyle: { backgroundColor: '#d13568' }
+    }
+  }
+}, {
+  initialRouteName: 'Home',
+  activeColor: '#ffffff',
+  inactiveColor: '#bda1f7',
+  barStyle: { backgroundColor: '#6948f4' }
+})
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
+
+export default createAppContainer(TabNavigator)
