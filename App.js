@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import Home from './screens/Home'
 import Search from './screens/Search'
 import Suggest from './screens/Suggest'
@@ -30,6 +30,14 @@ const HomeNav = createStackNavigator({
   }
 })
 
+const SuggestNav = createStackNavigator({
+  "Suggest an Anime": {
+    screen: Suggest
+  }
+}, {
+  initialRouteName: 'Suggest an Anime'
+})
+
 const TabNavigator = createMaterialBottomTabNavigator({
   Home: {
     screen: HomeNav,
@@ -56,7 +64,7 @@ const TabNavigator = createMaterialBottomTabNavigator({
     }
   },
   Suggest: {
-    screen: Suggest,
+    screen: SuggestNav,
     navigationOptions: {
       tabBarLabel: 'Suggest',
       tabBarIcon: ({ tintColor }) => (

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, StatusBar } from 'react-native'
 import { Tile, Button, Icon, SearchBar } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler'
-import { Ionicons } from '@expo/vector-icons'
 import { ANIME_SEARCH } from '../constants/url'
 import AnimeSearchResults from '../components/AnimeSearchResults'
 

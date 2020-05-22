@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, Text, View, StatusBar } from 'react-native'
 import { Tile, Button, Icon } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler'
-import { Ionicons } from '@expo/vector-icons'
 
 class Home extends React.Component {
     constructor(props) {
