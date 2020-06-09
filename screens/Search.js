@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, StatusBar } from 'react-native'
-import { Tile, Button, Icon, SearchBar } from 'react-native-elements'
+import { StyleSheet, View, StatusBar } from 'react-native'
+import { SearchBar } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler'
 import { ANIME_SEARCH } from '../constants/url'
 import AnimeSearchResults from '../components/AnimeSearchResults'

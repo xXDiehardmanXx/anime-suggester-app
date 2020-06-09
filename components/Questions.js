@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
 import { Card, Button, ListItem } from 'react-native-elements'
+import { ANIME_DATA } from '../assets/animeData/animeData'
 
 class Questions extends React.Component {
     constructor(props) {
@@ -14,9 +15,11 @@ class Questions extends React.Component {
                     {
                         this.props.node.yes.map((u, index) => {           
                             return (
-                                <View key={index}>
-                                    <Text>{u.id}</Text>
-                                </View>
+                                <ListItem
+                                    key={index}
+                                    title={ANIME_DATA[u.id]['title']}
+                                    bottomDivider
+                                    leftAvatar={{ rounded: true ,source: { uri: ANIME_DATA[u.id]['image_url'] } }} />
                             )
                         })
                     }
@@ -30,6 +33,10 @@ class Questions extends React.Component {
                             onPress={this.props.change} />
                     </View>
                 </Card>
+                <Button
+                    raised
+                    title='Reset Quiz'
+                    onPress={this.props.reset} />
             </View>
         )
     }
@@ -37,7 +44,7 @@ class Questions extends React.Component {
 
 const styles = StyleSheet.create({
     buttonView: {
-        margin: 4
+        margin: 4,
     },
     results: {
 

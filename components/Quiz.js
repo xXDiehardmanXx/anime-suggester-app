@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, StyleSheet } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import Questions from './Questions'
 
@@ -18,6 +18,10 @@ class Quiz extends React.Component {
         }
         this.setState({ currentNode: this.state.currentNode.no })
     }
+
+    resetButtonHandler = () => {
+        this.setState({ currentNode: root })
+    }
     
     render() {
         if (!this.props.type) {
@@ -25,7 +29,8 @@ class Quiz extends React.Component {
                 <ScrollView style={styles.container}>
                     <Questions
                         node={this.state.currentNode}
-                        change={this.changeQuestionHandler} />
+                        change={this.changeQuestionHandler}
+                        reset={this.resetButtonHandler} />
                 </ScrollView>
             )
         } else {
@@ -71,7 +76,6 @@ root.no = q2
 q2.no = q3
 q3.no = q4
 q4.no = q5
-
 
 const styles = StyleSheet.create({
     container: {

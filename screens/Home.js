@@ -10,7 +10,7 @@ class Home extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
               <StatusBar backgroundColor='#6948f4' barStyle='light-content' />
                 <View>
                     <Text style={{ padding: 10, fontWeight: 'bold', paddingBottom: 0 }}>My Favorites:</Text>
@@ -76,7 +76,7 @@ class Home extends React.Component {
               buttonStyle={{ height: 55 }}
               icon={<Icon name='users' type='font-awesome' color='white' size={20} />} />
         </View>
-    </View>
+    </ScrollView>
         )
     }
 }
