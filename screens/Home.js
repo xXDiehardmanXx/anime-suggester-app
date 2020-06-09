@@ -17,28 +17,28 @@ class Home extends React.Component {
                     <ScrollView
                         horizontal>
                         <Tile
-                        title='Gintama'
-                        imageSrc={require('../assets/images/gintama.jpg')}
-                        width={200}
-                        height={300}
-                        imageContainerStyle={{ margin: 10 }}
-                        titleStyle={{ fontSize: 18, fontWeight: 'bold' }}>
+                          title='Gintama'
+                          imageSrc={require('../assets/images/gintama.jpg')}
+                          width={200}
+                          height={300}
+                          imageContainerStyle={{ margin: 10 }}
+                          titleStyle={{ fontSize: 18, fontWeight: 'bold' }}>
                         </Tile>
                         <Tile
-                        title='Code Geass'
-                        imageSrc={require('../assets/images/codegeass.jpg')}
-                        width={200}
-                        height={300}
-                        imageContainerStyle={{ margin: 10 }}
-                        titleStyle={{ fontSize: 18, fontWeight: 'bold' }}>
+                          title='Code Geass'
+                          imageSrc={require('../assets/images/codegeass.jpg')}
+                          width={200}
+                          height={300}
+                          imageContainerStyle={{ margin: 10 }}
+                          titleStyle={{ fontSize: 18, fontWeight: 'bold' }}>
                         </Tile>
                         <Tile
-                        title='Engaveleon'
-                        imageSrc={require('../assets/images/gintama.jpg')}
-                        width={200}
-                        height={300}
-                        imageContainerStyle={{ margin: 10 }}
-                        titleStyle={{ fontSize: 18, fontWeight: 'bold' }}>
+                          title='Engaveleon'
+                          imageSrc={require('../assets/images/gintama.jpg')}
+                          width={200}
+                          height={300}
+                          imageContainerStyle={{ margin: 10 }}
+                          titleStyle={{ fontSize: 18, fontWeight: 'bold' }}>
                         </Tile>
                     </ScrollView>
                 </View>

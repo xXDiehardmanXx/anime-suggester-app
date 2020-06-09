@@ -1,17 +1,31 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
+import Questions from './Questions'
 
 class Quiz extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            currentNode: root
+        }
+    }
+
+    changeQuestionHandler = () => {
+        if (!this.state.currentNode.no) {
+            this.setState({ currentNode: root })
+            return
+        }
+        this.setState({ currentNode: this.state.currentNode.no })
     }
     
     render() {
         if (!this.props.type) {
             return (
                 <ScrollView style={styles.container}>
-                    <Text>Hi</Text>
+                    <Questions
+                        node={this.state.currentNode}
+                        change={this.changeQuestionHandler} />
                 </ScrollView>
             )
         } else {
@@ -27,7 +41,7 @@ class TreeNode {
       this.question = question;
     }
 }
-const root = new Node('First Anime?', [
+const root = new TreeNode('Looking for your first anime?', [
     { comment: 'Something epic like Avatar: The Last Airbender', id: 5114 },
     { comment: 'Space western (Firefly, Guardians of the Galaxy)', id: 1 },
     { comment: 'Crime drama mindgames with the Grim Reaper', id: 1535 }
