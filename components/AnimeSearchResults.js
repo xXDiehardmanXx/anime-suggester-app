@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity, Modal, Alert, StyleSheet, Image } from 'react-native'
+import { Text, View, TouchableOpacity, Modal, StyleSheet, Image } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { Card, Button, Icon } from 'react-native-elements'
 
@@ -12,7 +12,7 @@ class AnimeSearchResults extends React.Component {
         }
     }
 
-    handleCardPress = (index) => {
+    handleCardPress = index => {
         this.setState({
             showModal: true,
             selectedAnime: index
